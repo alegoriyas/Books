@@ -6,6 +6,8 @@
     #return render('index.html', {'book_list':book_list})
 
 from django.http import HttpResponse
+import datetime
 
 def index(request):
-    return HttpResponse("Hello, world!")
+    now = datetime.datetime.now()
+    return HttpResponse(now)
