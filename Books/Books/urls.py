@@ -15,6 +15,6 @@ urlpatterns = [
     url(r'^book/', include('book.urls')),
     url(r'^$', RedirectView.as_view(url='/book/', permanent=True)),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
 
 ]
