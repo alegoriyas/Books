@@ -8,12 +8,10 @@
 
 <body>
 <h1>Список книг</h1>
-    <ul>
-        {% for b in book_list %}
-        <li>{{ b.name }}</li>
-        <li>{{ b.pub_date|date:"d m Y" }}</li>
-        {% endfor %}
-    </ul>
+    {% for b in book_list %}
+        <h2>{{ b.name }}</h2>
+        <p>{{ b.pub_date|date:"d.m.Y H:i:s" }}</p>
+    {% endfor %}
 
 </body>
 </html>
