@@ -8,6 +8,7 @@
 
 <body>
 <h1>Список книг</h1>
+   <h2>Сегодня: {{ html }}</h2>
     {% for b in book_list %}
         <h2>{{ b.name }}</h2>
         <p>{{ b.pub_date|date:"d.m.Y H:i:s" }}</p>

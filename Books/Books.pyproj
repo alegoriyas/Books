@@ -45,7 +45,10 @@
     <Compile Include="Books\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="book\templates\book\base.html" />
     <Content Include="book\templates\book\index.html" />
+    <Content Include="book\templates\book\next_time.html" />
+    <Content Include="book\templates\book\time.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
