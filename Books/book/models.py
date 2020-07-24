@@ -20,10 +20,18 @@ class Author(models.Model):
     email = models.EmailField(blank=True, verbose_name = 'e-mail')
 
     class Meta:
+        verbose_name_plural = 'Авторы'
         verbose_name = 'Автор'
 
     def __str__(self):
         return u'%s %s' % (self.first_name, self.last_name)
+
+    def my_property(self):
+        return self.first_name + ' ' + self.last_name
+    my_property.short_description = "Full name of person"
+    my_property.admin_order_field = 'last_name'
+
+    full_name = property(my_property)
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
