@@ -26,3 +26,20 @@ def hours_ahead(request, offset):
     #now = "Через %s час(а, ов) будет %s." % (offset, dt)
     return render(request, 'book/next_time.html', {'next_time':dt,
                                                    'hour_offset':offset})
+
+def search_form(request):
+    return render(request, 'book/search_form.html')
+
+def search(request):
+    errors = []
+    if 'q' in request.GET:
+        q = request.GET['q']
+        if not q:
+            errors.append('Введите поисковый запрос.')
+        elif len(q) > 20:
+            errors.append('Введите не более 20 символов.')
+        else:
+            books = Book.objects.filter(title__icontains=q)
+            return render(request, 'book/search.html', {'books': books, 
+                                                    'query':q})
+    return render(request, 'book/search_form.html', {'errors': errors})

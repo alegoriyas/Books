@@ -38,6 +38,14 @@
     <Compile Include="book\urls.py" />
     <Compile Include="book\views.py" />
     <Compile Include="book\__init__.py" />
+    <Compile Include="contact\admin.py" />
+    <Compile Include="contact\apps.py" />
+    <Compile Include="contact\migrations\__init__.py" />
+    <Compile Include="contact\models.py" />
+    <Compile Include="contact\tests.py" />
+    <Compile Include="contact\urls.py" />
+    <Compile Include="contact\views.py" />
+    <Compile Include="contact\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="Books\__init__.py" />
     <Compile Include="Books\settings.py" />
@@ -46,8 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="book\templates\book\base.html" />
+    <Content Include="contact\templates\contact\contact_form.html" />
     <Content Include="book\templates\book\index.html" />
     <Content Include="book\templates\book\next_time.html" />
+    <Content Include="book\templates\book\search.html" />
+    <Content Include="book\templates\book\search_form.html" />
     <Content Include="book\templates\book\time.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
@@ -57,6 +68,10 @@
     <Folder Include="book\migrations\" />
     <Folder Include="book\templates\" />
     <Folder Include="book\templates\book\" />
+    <Folder Include="contact\" />
+    <Folder Include="contact\migrations\" />
+    <Folder Include="contact\templates\" />
+    <Folder Include="contact\templates\contact\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">

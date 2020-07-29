@@ -1,0 +1,20 @@
+﻿{% extends "book/base.html" %}
+
+{% block title %}Результат поиска{% endblock %}
+  
+{% block content %}
+    
+    <p>Вы искали: <strong>{{ query }}</strong></p>
+    {% if books %}
+        <p>Найдено  {{ books|length }} книг {{ books|pluralize }}.</p>
+        <ul>
+            {% for book in books %}
+            <li>{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+    {% elif message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <p>Книг, удовлетворяющих запросу не найдено.</p>
+    {% endif %}
+{% endblock %}
