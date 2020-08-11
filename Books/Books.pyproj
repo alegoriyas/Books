@@ -54,12 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="book\templates\book\base.html" />
+    <Content Include="contact\static\css\materialize.css" />
     <Content Include="contact\templates\contact\contact_form.html" />
     <Content Include="book\templates\book\index.html" />
     <Content Include="book\templates\book\next_time.html" />
     <Content Include="book\templates\book\search.html" />
     <Content Include="book\templates\book\search_form.html" />
     <Content Include="book\templates\book\time.html" />
+    <Content Include="contact\templates\contact\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +72,10 @@
     <Folder Include="book\templates\book\" />
     <Folder Include="contact\" />
     <Folder Include="contact\migrations\" />
+    <Folder Include="contact\static\" />
+    <Folder Include="contact\static\css\" />
+    <Folder Include="contact\static\js\" />
+    <Folder Include="contact\static\img\" />
     <Folder Include="contact\templates\" />
     <Folder Include="contact\templates\contact\" />
   </ItemGroup>

@@ -3,23 +3,27 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Свяжитесь с нами</title>
+    <title>Отправка сообщения</title>
 </head>
 <body>
-     <h1>Свяжитесь с нами</h1>
 
-    {% if errors %}
-    <ul>
-        {% for error in errors %}
-        <li>{{ error }}</li>
-        {% endfor %}
-    </ul>
+    {% if message_name %}
+        <center>
+            <h2>Спасибо, {{ message_name }}!</h2>
+            <p>Мы получили ваше сообщение и ответим в ближайшее время на ваш email {{ message_email }}...</p>
+        </center>
+    {% else %}
+
+        <!-- Contact Form -->
+        <h1>Отправка сообщения</h1>
+        <form action="/contact/contact_form/" method="post">
+            {% csrf_token %}
+            <p> Имя: <input type="text" name="message-name" placeholder="Ваше имя" /></p>
+            <p>Ваш email: <input type="email" name="message-email" placeholder="Ваш email" /></p>
+            <p>Сообщение: <textarea name="message" rows="10" cols="50"  placeholder="Ваше сообщение"></textarea></p>
+            <input type="submit"  value="Отправить" />
+        </form>
+
     {% endif %}
-    <form action="/book/contact/" method="post">
-        <p>Тема: <input type="text" name="subject" /></p>
-        <p>Ваш e-mail (необязательно): <input type="text" name="e-mail" /></p>
-        <p>Сообщение: <textarea name="message" rows="10" cols="50"></textarea></p>
-        <input type="submit" value="Отправить" />
-    </form>
 </body>
 </html>

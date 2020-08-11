@@ -128,5 +128,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+#Email Settings
+EMAIL_HOST = 'smtp.gmail.com'   #EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = 587                #EMAIL_PORT = os.environ.get('EMAIL_PORT')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True            #EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_USE_SSL = False
+
+#EMAIL_ADDRESS = os.environ.get('EMAIL_ADDRESS')
+EMAIL_HOST_USER = 'steblinaee@gmail.com'  #EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = 'Egorinka2019'      #EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+DEFAULT_FROM_EMAIL = 'Steblina Elena'
+#DEFAULT_TO_EMAIL = 'steblinaee@gmail.com'
