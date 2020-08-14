@@ -25,7 +25,7 @@ def contact_form(request):
             )
 
         return render(request, 'contact/contact_form.html', {'message_name': message_name,
-                                                              'message_email': message_email})
+                                                             'message_email': message_email})
     else:
         return render(request, 'contact/contact_form.html', {})
 
